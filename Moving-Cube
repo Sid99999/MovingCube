@@ -1,0 +1,42 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class cubecontrol : MonoBehaviour
+{
+
+    // Start is called before the first frame update
+   
+
+    
+
+    public float speed = 25f;
+    
+    
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        float horizontal = Input.GetAxis("Horizontal");
+         print(horizontal);
+
+         transform.Translate(horizontal*speed * Time.deltaTime, 0, 0);
+
+         float vertical = Input.GetAxis("Vertical");
+
+
+         transform.Translate(0, 0, vertical * speed*Time.deltaTime);
+        
+
+        
+
+
+        
+    }
+
+    
+}
